@@ -1,0 +1,10 @@
+name: CustomDisc
+version: '1.0-SNAPSHOT'
+main: org.miaoyww.customDisc.CustomDiscPlugin
+api-version: '1.20'
+
+commands:
+    disc:
+        description: Main command for CustomDisc
+        aliases:
+        - cdc

@@ -1,0 +1,1 @@
+copy "CustomDisc-1.0-SNAPSHOT.jar" "D:\Projects\Java\Server\1.20.6\plugins\CustomDisc-1.0-SNAPSHOT.jar"
