@@ -2,6 +2,7 @@ package org.miaoyww.customDisc.commands.subCommands;
 
 import org.bukkit.entity.Player;
 import org.miaoyww.customDisc.interfaces.ISubCommand;
+import org.miaoyww.customDisc.utils.Messages;
 
 public class HelpCommand extends ISubCommand {
     @Override
@@ -21,6 +22,6 @@ public class HelpCommand extends ISubCommand {
 
     @Override
     public void perform(Player player, String[] args) {
-        player.sendMessage("你触发了help指令");
+        Messages.sendHelpMessage(player);
     }
 }

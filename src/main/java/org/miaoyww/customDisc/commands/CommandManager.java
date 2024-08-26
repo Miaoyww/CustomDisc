@@ -2,6 +2,7 @@ package org.miaoyww.customDisc.commands;
 import org.miaoyww.customDisc.commands.subCommands.*;
 import org.miaoyww.customDisc.interfaces.ICommandManager;
 import org.bukkit.entity.Player;
+import org.miaoyww.customDisc.utils.Messages;
 
 
 public class CommandManager extends ICommandManager {
@@ -9,8 +10,8 @@ public class CommandManager extends ICommandManager {
         this.SubCommands.add(new HelpCommand());
         this.SubCommands.add(new AddCommand());
         this.SubCommands.add(new ListCommand());
-        this.SubCommands.add(new PlayCommand());
-        this.SubCommands.add(new MenuCommand());
+        this.SubCommands.add(new GetCommand());
+        this.SubCommands.add(new DelCommand());
     }
 
     @Override
@@ -30,6 +31,6 @@ public class CommandManager extends ICommandManager {
 
     @Override
     public void perform(Player player, String[] args) {
-        
+        Messages.sendHelpMessage(player);
     }
 }

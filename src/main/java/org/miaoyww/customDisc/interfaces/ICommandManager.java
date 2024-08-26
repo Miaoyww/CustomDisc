@@ -8,6 +8,7 @@ import org.bukkit.command.TabExecutor;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.miaoyww.customDisc.utils.Messages;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -52,11 +53,11 @@ public abstract class ICommandManager extends ISubCommand implements TabExecutor
                 return true;
             } else {
                 if (getCommand(args[0]) == null) {
-                    commandSender.sendMessage("Invalid subcommand");
+                    Messages.sendMessageToPlayer((Player) commandSender, "未找到子命令");
                     return true;
                 }
                 if (args[0].isEmpty()) {
-                    commandSender.sendMessage("Invalid subcommand");
+                    Messages.sendMessageToPlayer((Player) commandSender, "未找到子命令");
                     return true;
                 }
                 // 将args减少一个以便递归
